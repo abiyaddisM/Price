@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 [textContent]="title"></h2>
+ <div class="list-container">
+   <ul  *ngFor="let list of lists">
+     <li class="list"><i class="ri-checkbox-fill"></i>{{list}}</li>
+   </ul>
+ </div>
+  <div class="btn" (click)="closeSeeMore()"><p [textContent]="button"></p></div>
+</div>
+
+<div class="see-more-background" [class.background-hide]="!state" [class.background-show]="state" >
+  <div class="see-more-container">
+    <i  class="fa-solid fa-xmark close-button" (click)="closeSeeMore()"></i>
+    <h2 [textContent]="title"></h2>
+
+    <ul  *ngFor="let list of lists">
+      <li class="list"><i class="ri-checkbox-fill"></i>{{list}}</li>
+    </ul>
+    <h3 class="gold-change">60,000 ETB/Year</h3>
+
+  </div>
+</div>
